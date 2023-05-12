@@ -11,5 +11,5 @@ pip3 install -r requirements.txt
 
 ## Usage
 1. Create resource and result folder
-2. Put your html file into resource folder
+2. Put your html file where you downloaded from RSNA into resource folder
 3. `python main.py`
