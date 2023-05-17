@@ -5,7 +5,6 @@ import json
 files = list(Path('./resource/').iterdir())
 
 
-
 def get_template() -> (str, str):
     Json = ''
     Component = ''
@@ -59,7 +58,9 @@ def generate_script() -> str:
     }\n'''
     script_str += 'function Submit(){\n'
     for i in range(len(Json['component'])):
-        script_str += f'\tjson.component[{i}].valueString=document.getElementById("{ids[i]}").value;\n'
+        script_str += \
+            f'\tjson.component[{i}].valueString \
+                =document.getElementById("{ids[i]}").value;\n'
     script_str += '\tpostData(json,"Observation")\n}'
     return script_str
 
